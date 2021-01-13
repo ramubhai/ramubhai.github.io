@@ -5,14 +5,32 @@
         </title>
     </head>
     <body>
-        Click this link in internet explorer to open the network share and copy the folder named TCC v1.1.0 to your local PC. 
+        Open the following path in windows explorer. <br>
+        <input type="text" value="\\10.40.69.178\Distribute\" id="path"><br>
+        <button onclick="myFunction()">
+            Click Here to copy above path.
+        </button>
+        <script type="text/javascript">
+            function myFunction()
+            {
+                var copyText = document.getElementById("path");
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); /* For mobile devices */
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+            }
+        </script>
+        <br>
+        Open the network share and copy the folder named TCC v1.1.0 to your local PC. 
         <br>
         After copyting, click "TeklaControlCenter.exe" in the folder to run the application.
         <br>
+        <!--
         <a href="file://10.40.69.178/Distribute/"> Click Me !</a>
         <script type="text/javascript">
             //top.location.href="https://www.ramshanker.in"; //This line is working.
             top.location.href="file://10.40.69.178/Distribute/";
         </script>
+        -->
     </body>
 </html>
